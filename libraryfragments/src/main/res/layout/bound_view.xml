@@ -5,7 +5,7 @@
 
         <variable
                 name="viewModel"
-                type="android.arch.lifecycle.ViewModel"/>
+                type="androidx.lifecycle.ViewModel"/>
     </data>
 
     <!-- Unused View added to generate a ViewModel variable in the BR file -->

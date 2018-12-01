@@ -1,6 +1,6 @@
 package com.simonmcd.injectableviewmodelssample
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import javax.inject.Inject
 
 
