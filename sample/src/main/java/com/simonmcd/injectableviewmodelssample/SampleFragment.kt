@@ -6,6 +6,7 @@ import com.simonmcd.injectableviewmodelssample.databinding.SampleBinding
 
 class SampleFragment : ViewModelFragment<SampleBinding, SampleViewModel>() {
 
+    override val viewModelClass = SampleViewModel::class.java
     override val layoutResourceID = R.layout.sample
 
     init {

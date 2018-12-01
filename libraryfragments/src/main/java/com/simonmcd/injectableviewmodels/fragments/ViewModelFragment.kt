@@ -19,13 +19,13 @@ abstract class ViewModelFragment<VIEW_BINDING : ViewDataBinding, VM : ViewModel>
 
     abstract val layoutResourceID: Int
 
-    private inline fun <reified VM> viewModelClass() = VM::class.java
+    abstract val viewModelClass: Class<VM>
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     val viewModel by lazy {
-        ViewModelProviders.of(this, viewModelFactory).get(viewModelClass())
+        ViewModelProviders.of(this, viewModelFactory).get(viewModelClass)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
