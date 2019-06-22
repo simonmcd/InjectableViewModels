@@ -45,7 +45,7 @@ abstract class ViewModelFragment<VIEW_BINDING : ViewDataBinding, VM : ViewModel>
      * When true, the ViewModel provided will be tied to the Fragment. Otherwise it will be tied to the parent Activity.
      * By sharing with the parent Activity multiple Fragments may share data using the same ViewModel instance.
      */
-    protected open val limitViewModelScopeToFragment = false
+    protected open val limitViewModelScopeToFragment = true
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, layoutResourceID, container, false)
